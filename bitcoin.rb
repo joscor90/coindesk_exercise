@@ -35,3 +35,14 @@ puts data.class  #Vemos que ahora es un hash
 date_price_hash = data["bpi"]
 
 print "#{date_price_hash}" #Con esto obtuvimos un hash con sólo las fechas y los precios.
+
+#Ahora vamos a procesar los resultados, necesitamos crear a un arreglo vacío para pasar allí los datos que cumplan el filtro.
+
+date_arr = []
+date_price_hash.each do |k, v|
+    if v < 11500
+        date_arr.push(k)
+    end
+end
+
+print "#{date_arr}" #Aquí tengo todas las fechas donde el precio de venta fue menor a 11500.
