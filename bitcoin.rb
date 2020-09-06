@@ -30,5 +30,8 @@ Esto es lo que obtenemos, ojo con esto porque es un string, por lo tanto debemos
 data = JSON.parse(data)
 puts data.class  #Vemos que ahora es un hash
 
-#Vamos a iterar dentro de este hash.
+#Vbpi es la llave, pero los valores están almacenados en un hash así que voy a guardar esta variable en otro hash por separado.
 
+date_price_hash = data["bpi"]
+
+print "#{date_price_hash}" #Con esto obtuvimos un hash con sólo las fechas y los precios.
